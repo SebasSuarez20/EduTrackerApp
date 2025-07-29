@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EduTrackServer.CapaBase\EduTrackServer.CapaBase.csproj" />
+    <ProjectReference Include="..\EduTrackServerSln\EduTrackerServer.CapaDTO\EduTrackerServer.CapaDTO.csproj" />
+    <ProjectReference Include="..\EduTrackServerSln\EduTrackServer.DTO\EduTrackServer.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

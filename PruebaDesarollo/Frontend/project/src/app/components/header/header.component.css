@@ -1,0 +1,80 @@
+.custom-card {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* columnas del tamaño de las cards */
+  gap: 100px; /* separación entre tarjetas */
+  justify-content: center; /* centra horizontalmente */
+  align-content: center;   /* centra verticalmente */
+  height: 100vh;           /* ocupa toda la altura de la pantalla */
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.avatar-image {
+  background-image: url('https://i.pravatar.cc/300'); /* o tu URL personalizada */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Elimina margen izquierdo que viene de otras plantillas */
+@media (min-width: 768px) {
+  .main-header,
+  .main-footer,
+  .content-wrapper {
+    margin-left: 0 !important;
+  }
+}
+
+/* Estilos del toolbar */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 20px;
+}
+
+/* Hace que el espacio se distribuya */
+.spacer {
+  flex: 1;
+}
+
+/* Estilo del avatar */
+.avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+
+.card-info {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-info img {
+    width: 167px;
+}
+
+.text-card {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-card{
+    border: none;
+    border-radius: 5px;
+    width: 115px;
+    background-color: grey;
+    color: #fff;
+    cursor: pointer;
+}

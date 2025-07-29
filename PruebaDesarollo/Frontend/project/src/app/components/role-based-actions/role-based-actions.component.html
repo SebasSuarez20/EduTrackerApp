@@ -1,0 +1,72 @@
+<app-header/>
+<div class="box-container">
+    <mat-card class="custom-card">
+        <mat-card-header>
+            <div class="text-card">
+                <mat-card-title>
+
+                    <strong>Consultar</strong>
+
+                </mat-card-title>
+            </div>
+
+        </mat-card-header>
+       <div class="card-info">
+         <img mat-card-image src="/assets/icono/consultar.gif" alt="Imagen de la tarjeta" />
+  
+        <mat-card-actions>
+            <button class="btn-card" mat-button color="primary"
+             (click)="this.openModal('Consultar')"
+            >Consultar</button>
+        </mat-card-actions>
+       </div>
+    </mat-card>
+
+    <mat-card class="custom-card">
+        <mat-card-header>
+            <div class="text-card">
+                <mat-card-title> 
+                       <strong>Insertar</strong>    
+                </mat-card-title>
+            </div>
+
+        </mat-card-header>
+       <div class="card-info">
+         <img mat-card-image src="/assets/icono/insert.gif" alt="Imagen de la tarjeta" />
+  
+        <mat-card-actions>
+            <button class="btn-card" mat-button color="primary" data-toggle="modal" data-target="#insertModal" 
+            (click)="this.openModal('Insertar')">Insertar</button>
+        </mat-card-actions>
+       </div>
+    </mat-card>
+
+   
+    
+    <mat-card class="custom-card">
+        <mat-card-header >
+            <div class="text-card">
+               <mat-card-title> 
+            <strong>Configuracion</strong>        
+            </mat-card-title>
+            </div>
+
+        </mat-card-header>
+       <div class="card-info">
+         <img mat-card-image src="/assets/icono/setting.gif" alt="Imagen de la tarjeta" />
+  
+        <mat-card-actions>
+            <button class="btn-card" mat-button color="primary">Configuracion</button>
+        </mat-card-actions>
+       </div>
+    </mat-card>
+
+</div>
+
+@if (this.strlPoup == 'Insertar') {
+    <app-insert-popup (close)="this.closeModal()"/>
+}
+
+@if (this.strlPoup == 'Consultar') {
+    <app-consult-popup (close)="this.closeModal()"/>
+}

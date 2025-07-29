@@ -1,0 +1,101 @@
+<!-- Modal -->
+<div class="modal fade" id="consultModal" 
+
+    data-backdrop="static"
+    data-keyboard="false" aria-hidden="true"
+tabindex="-1" aria-labelledby="consultModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Consulta la informacion</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="this.onModalClosed()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+
+          <form [formGroup]="this.formConsult">
+  <label for="exampleFormControlSelect1">Materias</label>
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="codeTeacher" >
+            <option value="" selected>Seleccionar materia</option>
+            @for (teacher of codeTeacher; track $index; let j = $index) {
+            <option [value]="teacher.code">
+              {{ teacher.code }}
+            </option>
+            }
+          </select>
+          
+          </form>
+        
+          <br>
+          <div class="accordion" id="accordionExample">
+  <div class="card">  
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Informacion de la materia
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+       
+        <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Horario Inicial</th>
+      <th scope="col">Horario Final</th>
+      <th scope="col">Dia</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (info of this.ListInformationSubject; track $index; let i = $index) {
+    <tr>
+      <td>{{ info["hoursInitial"] }}</td>
+      <td>{{ info["hoursFinal"] }}</td>
+      <td>{{ info["day"] }}</td>
+      <td></td>
+    </tr>
+    }
+</table>
+
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Estudiantes inscritos
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+             <table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th scope="col">Nombre Alumno</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (info of this.ListInformationStudent; track $index; let i = $index) {
+    <tr>
+      <td>{{ info["nameStudent"] }}</td>
+    </tr>
+    }
+</table>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.containerBody {
+width: 482px;
+    height: 341px;
+    background-color: #fff;
+    border-radius: 8px;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.delete-icon {
+  color: red;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

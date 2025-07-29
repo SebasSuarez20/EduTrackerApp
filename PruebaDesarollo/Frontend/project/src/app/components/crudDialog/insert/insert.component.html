@@ -1,0 +1,42 @@
+<!-- Modal -->
+<div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModal"
+    
+    data-backdrop="static"
+    data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Insercion de informacion para las materias
+                    correspondientes.</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onModalClosed()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+
+                    @for (info of this.listInformation; track $index; let i = $index) {
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Materia {{i + 1}}</label>
+                        <select class="form-control" id="exampleFormControlSelect1" class="subject{{ i }}"
+                            (change)="validatorTeacher($event, i)">
+                            <option value="" selected>Seleccionar materia</option>
+
+                            @for (teacher of codeTeacher; track $index; let j = $index) {
+                            <option [value]="teacher.idx" [selected]="teacher.idx === this.idxArray[i]">
+                                {{ teacher.code }} : {{ teacher.name }}
+                            </option>
+                            }
+                        </select>
+                    </div>
+                    }
+
+                </form>
+
+                <button type="button" class="btn btn-primary btn-xs btn-block"
+                    (click)="this.saveInformationList()">Guardar Informacion.</button>
+            </div>
+        </div>
+    </div>
+</div>
