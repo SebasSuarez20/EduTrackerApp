@@ -70,7 +70,6 @@ export class ConsultPopupComponent implements OnInit, OnDestroy {
             this.ListInformationStudent = [];
             this.ListInformationSubject = [];
             this.formConsult.get("codeTeacher")?.setValue('');
-            this.codeTeacher = [];
           }
 
         } else {
@@ -79,7 +78,7 @@ export class ConsultPopupComponent implements OnInit, OnDestroy {
             idx: item.idxSubjects ?? 0
           })) ?? [];
 
-          console.log(this.codeTeacher);
+           this.formConsult.get("codeTeacher")?.setValue('');
         }
 
       }, error: (err) => {
@@ -110,7 +109,7 @@ export class ConsultPopupComponent implements OnInit, OnDestroy {
           this._serviceHttp.deleteHttp<number>(`/SubjectWithStudent/DeleteInformationStudentWithSubject?id=${idx}`).subscribe((res) => {
 
             if (res.status === HttpStatusCode.Ok) {
-              this.loadAsyncInformationAll(`/SubjectWithStudent/GetInformationForStudentAndAlls?name=${this.strCodeTeacher}`);
+       this.loadAsyncInformationAll("/SubjectWithStudent/GetInformationForStudentAndAlls");
             }
 
           });

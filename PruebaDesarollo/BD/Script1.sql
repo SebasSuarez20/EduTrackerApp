@@ -183,6 +183,17 @@ INSERT INTO SubjectsAssignation (Name, Day, HoursInitial, HoursFinal, Username,F
 ('Tecnología e Informática', '4', '11:00:00', '12:00:00', 'admin',10),
 ('Tecnología e Informática', '6', '11:00:00', '12:00:00', 'admin',10);
 
+INSERT INTO SubjectsWithTeacher (IdFkTeacher, IdFkSubject, Enabled, Username)
+VALUES
+  (1, 10, 1, 'admin'),
+  (2, 2, 1, 'admin'),
+  (2, 4, 1, 'admin'),
+  (3, 9, 1, 'admin'),
+  (3, 6, 1, 'admin'),
+  (4, 1, 1, 'admin'),
+  (4, 3, 1, 'admin'),
+  (5, 7, 1, 'admin');
+
 
 #Insercion en usuarios.
 INSERT INTO Users (Identification, Password, Rol, Enabled, Username)

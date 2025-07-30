@@ -76,20 +76,10 @@ END$$
 DELIMITER $$
 CREATE PROCEDURE Sp_TeacherAll()
 BEGIN
-
-     SELECT 
-    sa.FkIdControlSubject AS IdxSubject,
-    sa.Name,sa.Day,sa.HoursInitial,sa.HoursFinal,
-    CONCAT_WS(' ',t.FirstName,t.FirstSurname) AS NameTeacher,
-     ROW_NUMBER() OVER(PARTITION BY sa.FkIdControlSubject) AS Idx
-    FROM teachers t
-    INNER JOIN subjectswithteacher ts ON ts.IdFkTeacher = t.Idcontrol AND ts.Enabled = TRUE
-    INNER JOIN subjectsassignation sa ON sa.FkIdControlSubject = ts.Idcontrol AND sa.Enabled = TRUE
-    WHERE t.Enabled = TRUE;
+SELECT d.* FROM SubjectsWithTeacherWithDescription d;
 	
 END$$
 
-CALL Sp_TeacherAll();
 
 
 #Token 
