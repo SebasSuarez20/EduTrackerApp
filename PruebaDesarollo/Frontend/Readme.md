@@ -44,3 +44,4 @@ El proyecto está organizado en carpetas como:
 ## ✅ Funcionalidad Destacada
 
 - **CRUD completo del módulo de estudiantes** finalizado y funcionando.
+- Ademas validacion pedidas para el sistema tales como que no se pueda registrar 3 materias el estudiante.
