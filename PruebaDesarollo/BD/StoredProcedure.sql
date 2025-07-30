@@ -80,7 +80,5 @@ SELECT d.* FROM SubjectsWithTeacherWithDescription d;
 	
 END$$
 
-
-
 #Token 
 #qYbRKmGXAk8lmd74usTeE7M2HBb8sEzjO778RkuWh4rrA5DhTFQaWVrtEG+dtksn1SFkdlVUQf+Z5l6Vr7rQTyezJWTi3ufVUB5ELIdjImI=

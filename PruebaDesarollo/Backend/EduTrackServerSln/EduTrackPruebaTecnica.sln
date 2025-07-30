@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduTrackServer.CapaDatos", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduTrackServer.CapaLogica", "..\EduTrackServer.CapaLogica\EduTrackServer.CapaLogica.csproj", "{2C87A9B8-9777-426B-B895-D97D9A688009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduTrackerServer.CapaDTO", "EduTrackerServer.CapaDTO\EduTrackerServer.CapaDTO.csproj", "{8ED7F209-779E-4D7C-B76A-2805A99A2F17}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{2C87A9B8-9777-426B-B895-D97D9A688009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C87A9B8-9777-426B-B895-D97D9A688009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C87A9B8-9777-426B-B895-D97D9A688009}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8ED7F209-779E-4D7C-B76A-2805A99A2F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ED7F209-779E-4D7C-B76A-2805A99A2F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ED7F209-779E-4D7C-B76A-2805A99A2F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ED7F209-779E-4D7C-B76A-2805A99A2F17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

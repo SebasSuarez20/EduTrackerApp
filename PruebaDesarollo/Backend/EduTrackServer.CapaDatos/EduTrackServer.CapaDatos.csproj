@@ -16,8 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EduTrackServer.CapaBase\EduTrackServer.CapaBase.csproj" />
-    <ProjectReference Include="..\EduTrackServerSln\EduTrackerServer.CapaDTO\EduTrackerServer.CapaDTO.csproj" />
-    <ProjectReference Include="..\EduTrackServerSln\EduTrackServer.DTO\EduTrackServer.DTO.csproj" />
   </ItemGroup>
 
 </Project>

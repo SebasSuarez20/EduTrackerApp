@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EduTrackServer.CapaDatos\EduTrackServer.CapaDatos.csproj" />
-    <ProjectReference Include="..\EduTrackServerSln\EduTrackServer.DTO\EduTrackServer.DTO.csproj" />
   </ItemGroup>
 
 </Project>

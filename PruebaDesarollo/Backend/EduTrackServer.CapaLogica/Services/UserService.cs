@@ -39,7 +39,7 @@ namespace SistemaTickets.Services
 
                 UsersAllForLoginViews descrypt = JsonSerializer.Deserialize<UsersAllForLoginViews>(decrypted) ?? new UsersAllForLoginViews();
 
-                IEnumerable<UsersAllForLoginViews> result = await _dbHandlerUser.GetAllAsyncForAllWithClouse(new UsersAllForLoginViews { Identification = descrypt.Identification, Password = descrypt.Password });
+                IEnumerable<UsersAllForLoginViews> result = await _dbHandlerUser.GetAllAsyncForAllWithClouse(new UsersAllForLoginViews { Identification = descrypt.Identification, Password = GenerateClassActive.ConvertToSha256(descrypt.Password) });
 
                 if (result.Any())
                 {
